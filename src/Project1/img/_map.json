@@ -250,7 +250,7 @@
 	},
 	{
 		"id": 31,
-		"points": -999999,
+		"points": -9999,
 		"src": "Herobrine.png",
 		"match": "dying.ogg",
 		"mismatch": "boomboomboom.ogg",
