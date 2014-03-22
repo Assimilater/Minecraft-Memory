@@ -137,9 +137,6 @@ public class OptionsDialog extends JDialog implements ActionListener {
 		}
 	}
 	
-	// A statically accessible method to show the dialog
-	public static void open() { new OptionsDialog(); }
-	
 	// ActionListener
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == Cancel) {

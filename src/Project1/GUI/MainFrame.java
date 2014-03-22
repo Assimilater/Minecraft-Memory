@@ -111,7 +111,7 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 			}
 		}
 		else if (e.getSource() == OptionsMenuItem) {
-			OptionsDialog.open();
+			new OptionsDialog();
 		}
 		else if (e.getSource() == ExitMenuItem) {
 			if (confirmQuit("Exit")) {
@@ -119,12 +119,7 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 			}
 		}
 		else if (e.getSource() == RulesMenuItem) {
-			if (RulesDialog.get() == null) {
-				new RulesDialog();
-			}
-			else {
-				RulesDialog.get().setVisible(true);
-			}
+			new RulesDialog();
 		}
 		else if (e.getSource() == SoundMenuItem) {
 			if (SoundTest.get() == null) {
