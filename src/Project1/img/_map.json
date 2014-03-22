@@ -1,0 +1,260 @@
+{
+	"Objects": [
+	{
+		"id": 0,
+		"points": 1,
+		"src": "Villager.png",
+		"match": "Villageraccept.ogg",
+		"mismatch": "Villagerdeny.ogg",
+		"reveal": "Villagertrade.ogg"
+	},
+	{
+		"id": 1,
+		"points": 0,
+		"src": "Bat.png",
+		"match": "6df3b2c2b951863fc5200edf3ff3396b105ed897.ogg",
+		"mismatch": "fddba78b2426f8056be081c98fe82e8411a0a5cf.ogg",
+		"reveal": "c3c175d70372d8448c070d0716a8d88beec8b8b7.ogg"
+	},
+	{
+		"id": 2,
+		"points": 1,
+		"src": "Chicken.png",
+		"match": "31b52151bf2a6fa35d2d2aa72f832285d9e7d70d.ogg",
+		"mismatch": "18752157f5d8718e2752805a657c74a73d2b88db.ogg",
+		"reveal": "74e5422bd83bb2041a6f0d09644bc095c0e9e21a.ogg"
+	},
+	{
+		"id": 3,
+		"points": 1,
+		"src": "Cow.png",
+		"match": "2a031f10c7dc24e75d5dc3a374ebe7f36fc3e143.ogg",
+		"mismatch": "989c3b614f736aa77bb2800821ea56936e98ca68.ogg",
+		"reveal": "e07a2da49011ef4cf9d6b1c80a91a06f808c1243.ogg"
+	},
+	{
+		"id": 4,
+		"points": 1,
+		"src": "Horse.png",
+		"match": "7bbbd6126bd37b4f2ec059d2784f95310bd55b75.ogg",
+		"mismatch": "c80439669ee4c5ab6e236787f57fc6aa980dc6f9.ogg",
+		"reveal": "a02c38569979cd6f4305f9e43a7a9fe26477d161.ogg"
+	},
+	{
+		"id": 5,
+		"points": 1,
+		"src": "Mooshroom.png",
+		"match": "2a031f10c7dc24e75d5dc3a374ebe7f36fc3e143.ogg",
+		"mismatch": "989c3b614f736aa77bb2800821ea56936e98ca68.ogg",
+		"reveal": "e07a2da49011ef4cf9d6b1c80a91a06f808c1243.ogg"
+	},
+	{
+		"id": 6,
+		"points": 1,
+		"src": "Ocelot.png",
+		"match": "847ec719ee91e28d7bf58ab39a5d8d6bd5728314.ogg",
+		"mismatch": "28409652d939d2489d8b5317d51abb873821f0f4.ogg",
+		"reveal": "9d2202fce7908dcc5b5c8758c5cd517d863d4dd3.ogg"
+	},
+	{
+		"id": 7,
+		"points": 1,
+		"src": "Pig.png",
+		"match": "4bc87ab869e17732a20c7518a327136baf5b2c26.ogg",
+		"mismatch": "58efedf302e0203a6ff9e59a6535d300286c5594.ogg",
+		"reveal": "a99bf88163bcb576e31e6e2275145afba6d1b4c7.ogg"
+	},
+	{
+		"id": 8,
+		"points": 1,
+		"src": "Sheep.png",
+		"match": "c7b1005d4926f6a2e2387a41ab1fb48a72f18e98.ogg",
+		"mismatch": "c9ac72409cbe6093e84d72a2a5c719d9e4a0e6b2.ogg",
+		"reveal": "a3ffeaa0a75b8d2bdc949c181a6f8db78f8976ca.ogg"
+	},
+	{
+		"id": 9,
+		"points": 1,
+		"src": "Squid.png",
+		"match": "",
+		"mismatch": "",
+		"reveal": ""
+	},
+	{
+		"id": 10,
+		"points": 1,
+		"src": "Snow_Golem.png",
+		"match": "",
+		"mismatch": "",
+		"reveal": ""
+	},
+	{
+		"id": 11,
+		"points": 2,
+		"src": "Iron_Golem.png",
+		"match": "770b3f1feb05b9b941d858eb72b9d04ffc5d52c9.ogg",
+		"mismatch": "a2dbb90f23b0babe7c569ceca28db49d0c112714.ogg",
+		"reveal": "942937fcad0fefd61e019678e3710f3f077757d4.ogg"
+	},
+	{
+		"id": 12,
+		"points": 1,
+		"src": "Wolf.png",
+		"match": "2452c64a55eaef86bf1b668bb4d5f3b641cd8f25.ogg",
+		"mismatch": "0b29f5ce8c4c10fa4184e5d29244f3bc121468a0.ogg",
+		"reveal": "84556bac99c01ad006552cf5d96494817e9b1700.ogg"
+	},
+	{
+		"id": 13,
+		"points": 2,
+		"src": "Cave_Spider.png",
+		"match": "4c69a6edc25d973999aa0db2bb46b583a31da278.ogg",
+		"mismatch": "501b40b97ee55cb7a97943ee620aa05131089fc2.ogg",
+		"reveal": "65b49739d48ebc47879ca5528c8283329980b304.ogg"
+	},
+	{
+		"id": 14,
+		"points": 1,
+		"src": "Spider.png",
+		"match": "4c69a6edc25d973999aa0db2bb46b583a31da278.ogg",
+		"mismatch": "501b40b97ee55cb7a97943ee620aa05131089fc2.ogg",
+		"reveal": "65b49739d48ebc47879ca5528c8283329980b304.ogg"
+	},
+	{
+		"id": 15,
+		"points": 2,
+		"src": "Zombie_Pigman.png",
+		"match": "40b8e244d03ae17483edd4571bd851e10a97050f.ogg",
+		"mismatch": "a2cfbea288280419ec0c8fb75d8ee5395536ac02.ogg",
+		"reveal": "c76dea473821e2ae9a1f006a4eddfdd0703eecdf.ogg"
+	},
+	{
+		"id": 16,
+		"points": -3,
+		"src": "Creeper.png",
+		"match": "a94a69e56568f5789cab05382cfd81f601189fd1.ogg",
+		"mismatch": "74771428c2aa2acbd30638c6706867053bad64d3.ogg",
+		"reveal": "a92ba2b8f6abc41aa8d679ad808a81d0aafa04b2.ogg"
+	},
+	{
+		"id": 17,
+		"points": 2,
+		"src": "Blaze.png",
+		"match": "17491c8dd9511e9d848c92b4b7ae047aed164072.ogg",
+		"mismatch": "cb1cf4b405d930ad27f09ea39d6a64f35fc13308.ogg",
+		"reveal": "4e398c518ae706ad4d90afd6914f748faf18a7b5.ogg"
+	},
+	{
+		"id": 18,
+		"points": 2,
+		"src": "Ghast.png",
+		"match": "725e5179c72444c6d885e39c27e6b31ed83d58bc.ogg",
+		"mismatch": "6f1d403f47725af0f4c42a74cfec00ff59153160.ogg",
+		"reveal": "882d092b05faef1cfa6af43d642b9e8843f22756.ogg"
+	},
+	{
+		"id": 19,
+		"points": 1,
+		"src": "Magma_Cube.png",
+		"match": "560dd97e6da8badbc8ac00b28c45312e60a525f2.ogg",
+		"mismatch": "86a2a7206c769aaa9435aabba70be201cb3e3a6b.ogg",
+		"reveal": "4c4bcc6905430286f32a862ce69665c51bd9938f.ogg"
+	},
+	{
+		"id": 20,
+		"points": 2,
+		"src": "Silverfish.png",
+		"match": "24cdac5a80fdad7ab31dc0695b57ece55aecb21a.ogg",
+		"mismatch": "84c3b008dc1d5e0dd5e8ad85a06eca29f0591e48.ogg",
+		"reveal": "515dffc5d6dd216550d69e61b2eb9c3593b19a20.ogg"
+	},
+	{
+		"id": 21,
+		"points": 1,
+		"src": "Skeleton.png",
+		"match": "641e601132b4adb67951e0d49c1004cf1b86eff2.ogg",
+		"mismatch": "4d03069c0e14794b463f563044da46433776da60.ogg",
+		"reveal": "199c9f150822950385b9bc1d840605a6a795bd27.ogg"
+	},
+	{
+		"id": 22,
+		"points": 1,
+		"src": "Slime.png",
+		"match": "5cde2500773323f7997d75062f8a26afcdf62b2e.ogg",
+		"mismatch": "f6e2067571631aae206000a501c9adebe862e32a.ogg",
+		"reveal": "b5eca1979e69271b2065ac67ba2c37b5afac0f98.ogg"
+	},
+	{
+		"id": 23,
+		"points": 2,
+		"src": "Witch.png",
+		"match": "",
+		"mismatch": "",
+		"reveal": ""
+	},
+	{
+		"id": 24,
+		"points": 1,
+		"src": "Zombie.png",
+		"match": "6e0488ab07b9539fbaebc093f194bb6a95b2caec.ogg",
+		"mismatch": "f35e14af35d1d12244dac9e655f4e31d4ef84e1b.ogg",
+		"reveal": "b5bc9775243437d87317ab3a66ec8a4d5b96c83d.ogg"
+	},
+	{
+		"id": 25,
+		"points": 2,
+		"src": "Spider_Jockey.png",
+		"match": "641e601132b4adb67951e0d49c1004cf1b86eff2.ogg",
+		"mismatch": "4d03069c0e14794b463f563044da46433776da60.ogg",
+		"reveal": "65b49739d48ebc47879ca5528c8283329980b304.ogg"
+	},
+	{
+		"id": 26,
+		"points": 3,
+		"src": "Chicken_Jockey.png",
+		"match": "6e0488ab07b9539fbaebc093f194bb6a95b2caec.ogg",
+		"mismatch": "f35e14af35d1d12244dac9e655f4e31d4ef84e1b.ogg",
+		"reveal": "74e5422bd83bb2041a6f0d09644bc095c0e9e21a.ogg"
+	},
+	{
+		"id": 27,
+		"points": 3,
+		"src": "Wither_Skeleton.png",
+		"match": "641e601132b4adb67951e0d49c1004cf1b86eff2.ogg",
+		"mismatch": "4d03069c0e14794b463f563044da46433776da60.ogg",
+		"reveal": "199c9f150822950385b9bc1d840605a6a795bd27.ogg"
+	},
+	{
+		"id": 28,
+		"points": 3,
+		"src": "Enderman.png",
+		"match": "d04dd6d1f050353ef9e3ba9c45f407f831903c69.ogg",
+		"mismatch": "c8cd465468a0fd41a1d5cc24cb499862b5ade2cb.ogg",
+		"reveal": "281b87984ddf8e94324bc86911a36c971cb3d831.ogg"
+	},
+	{
+		"id": 29,
+		"points": 5,
+		"src": "Wither.png",
+		"match": "ae27c6817985a9acb0a0fdefab89ff5d82dbe009.ogg",
+		"mismatch": "a4cf4ebe4c475cd6a4852d6b4228a4b64cf5cb00.ogg",
+		"reveal": "22ed26394cb6f6b5eeb2ceb54fb50608798d19e8.ogg"
+	},
+	{
+		"id": 30,
+		"points": 5,
+		"src": "Enderdragon.png",
+		"match": "53cc1890ebea833d3964c7dd1c90676650e34404.ogg",
+		"mismatch": "5a368ed32b3357e31629451ace57eb30d90e8874.ogg",
+		"reveal": "d859c9c5be04ffc41479b306814a933983eaa235.ogg"
+	},
+	{
+		"id": 31,
+		"points": -999999,
+		"src": "Herobrine.png",
+		"match": "dying.ogg",
+		"mismatch": "boomboomboom.ogg",
+		"reveal": "boomboomboom.ogg"
+	}
+	]
+}

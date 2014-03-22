@@ -1,0 +1,21 @@
+{
+	Sound: {
+		Mob: [
+			{ id: "1" , value: "Reveal" },
+			{ id: "1" , value: "MisMatch" },
+			{ id: "2" , value: "MisMatch" },
+			{ id: "7" , value: "Reveal" },
+			{ id: "7" , value: "MisMatch" },
+			{ id: "12" , value: "Match" },
+			{ id: "17" , value: "MisMatch" },
+			{ id: "19" , value: "Match" },
+			{ id: "20" , value: "Reveal" },
+			{ id: "22" , value: "Match" },
+			{ id: "28" , value: "Reveal" }
+		],
+		Clip: [
+			{ id: "Eat" },
+			{ id: "Burp" }
+		]
+	}
+}
