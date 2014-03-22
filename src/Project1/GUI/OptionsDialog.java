@@ -16,11 +16,12 @@ public class OptionsDialog extends JDialog implements ActionListener {
 	private static final int WIDTH = 325, HEIGHT = 180;
 	private static final String TITLE = "Minecraft Memory Options";
 	private Container pane;
-	
+
 	// GUI components
-	JLabel LblSize;
-	JRadioButton R6, R7, R8; private static final int RADIO_WIDTH = 200, RADIO_HEIGHT = 20;
+	private static final int RADIO_WIDTH = 200, RADIO_HEIGHT = 20;
+	JRadioButton R6, R7, R8;
 	JButton Ok, Cancel;
+	JLabel LblSize;
 	
 	public OptionsDialog() {
 		// Set standard JFrame properties
@@ -99,37 +100,37 @@ public class OptionsDialog extends JDialog implements ActionListener {
 		}
 	}
 	private void updateArgs() {
-		GameSize oldSize = Options.Size;
+		GameSize newSize;
 		if (R8.isSelected()) {
-			Options.Size = GameSize.C8;
+			newSize = GameSize.C8;
 		}
 		else if (R7.isSelected()) {
-			Options.Size = GameSize.C7;
+			newSize = GameSize.C7;
 		}
 		else {
-			Options.Size = GameSize.C6;
+			newSize = GameSize.C6;
 		}
 		
 		// Check if settings have changed and there is still a game active
 		if (Game.get() != null) {
-			if (Options.Size != oldSize) {
+			if (Options.Size != newSize) {
 				int Confirmation = JOptionPane.showConfirmDialog(this,
 					"Changes will not affect the current game. Quit the current game and start a new one?",
-					"Options Confirmation", JOptionPane.YES_NO_CANCEL_OPTION);
+					"Options Confirmation",
+					JOptionPane.YES_NO_CANCEL_OPTION
+				);
 				
-				if (JOptionPane.CANCEL_OPTION == Confirmation) {
-					Options.Size = oldSize;
-					resetArgs();
-					this.dispose();
-				} else if (JOptionPane.YES_OPTION == Confirmation) {
+				if (JOptionPane.NO_OPTION == Confirmation) {
+					Options.Size = newSize;
+				}
+				else if (JOptionPane.YES_OPTION == Confirmation) {
+					Options.Size = newSize;
 					new Game();
 				}
 			}
 		}
 		else {
-			int Confirmation = JOptionPane.showConfirmDialog(this,
-				"Start a new game?",
-				"Options Confirmation", JOptionPane.YES_NO_OPTION);
+			int Confirmation = JOptionPane.showConfirmDialog(this, "Start a new game?", "Options Confirmation", JOptionPane.YES_NO_OPTION);
 			
 			if (JOptionPane.YES_OPTION == Confirmation) {
 				new Game();
