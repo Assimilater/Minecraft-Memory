@@ -3,6 +3,9 @@ package Project1.Game;
 import Project1.GUI.CardButton;
 import Project1.GUI.GamePanel;
 import Project1.GUI.MainFrame;
+import Project1.Game.Modifiers.GameSize;
+import Project1.Game.Modifiers.Options;
+import Project1.Game.Modifiers.Player;
 
 import javax.swing.*;
 import java.util.*;

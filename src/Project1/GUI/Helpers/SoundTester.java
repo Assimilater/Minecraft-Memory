@@ -1,27 +1,29 @@
-package Project1.Debug;
+package Project1.GUI.Helpers;
 
+import Project1.Debug.Bug;
+import Project1.Debug.BugList;
 import Project1.Game.Card;
 import org.newdawn.easyogg.OggClip;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import javax.swing.*;
 import java.util.Map;
+import java.awt.event.ActionEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
 
-public class SoundTest extends JFrame implements WindowListener {
+public class SoundTester extends JFrame implements WindowListener {
 	private static final int WIDTH = 555, HEIGHT = 940;
 	private static final String TITLE = "Minecraft Memory - Sound Tester";
 	private Container pane;
 	private JPanel mobPanel, clipPanel;
 	
 	// Only allow single instance open
-	private static SoundTest instance;
-	public static SoundTest get() { return instance; }
+	private static SoundTester instance;
+	public static SoundTester get() { return instance; }
 	
-	public SoundTest() {
+	public SoundTester() {
 		// Set JFrame properties
 		this.setTitle(TITLE);
 		this.setResizable(false);

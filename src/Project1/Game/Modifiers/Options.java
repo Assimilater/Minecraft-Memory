@@ -1,4 +1,4 @@
-package Project1.Game;
+package Project1.Game.Modifiers;
 
 public class Options {
 	// Members pertaining to the board size, set by OptionsDialog

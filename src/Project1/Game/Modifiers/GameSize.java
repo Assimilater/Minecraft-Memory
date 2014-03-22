@@ -1,4 +1,4 @@
-package Project1.Game;
+package Project1.Game.Modifiers;
 
 public enum GameSize {
 	C6,

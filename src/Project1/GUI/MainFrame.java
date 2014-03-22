@@ -1,6 +1,8 @@
 package Project1.GUI;
 
-import Project1.Debug.SoundTest;
+import Project1.GUI.Helpers.GameHandbook;
+import Project1.GUI.Helpers.SoundTester;
+import Project1.GUI.Modifiers.OptionsDialog;
 import Project1.Game.Game;
 import Project1.MemoryGame;
 
@@ -119,14 +121,19 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 			}
 		}
 		else if (e.getSource() == RulesMenuItem) {
-			new RulesDialog();
-		}
-		else if (e.getSource() == SoundMenuItem) {
-			if (SoundTest.get() == null) {
-				new SoundTest();
+			if (GameHandbook.get() == null) {
+				new GameHandbook();
 			}
 			else {
-				SoundTest.get().setVisible(true);
+				GameHandbook.get().setVisible(true);
+			}
+		}
+		else if (e.getSource() == SoundMenuItem) {
+			if (SoundTester.get() == null) {
+				new SoundTester();
+			}
+			else {
+				SoundTester.get().setVisible(true);
 			}
 		}
 		else if (e.getSource() == AboutMenuItem) {

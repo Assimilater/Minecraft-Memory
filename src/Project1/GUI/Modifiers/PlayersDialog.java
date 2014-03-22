@@ -1,5 +1,6 @@
-package Project1.GUI;
+package Project1.GUI.Modifiers;
 
+import Project1.GUI.MainFrame;
 import Project1.MemoryGame;
 
 import javax.swing.*;

@@ -1,5 +1,6 @@
 package Project1.Game;
 
+import Project1.Game.Modifiers.Matching;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.newdawn.easyogg.OggClip;
@@ -29,9 +30,9 @@ public class Card {
 	public static Card getByID(int id) {
 		// Realistically this could probably just return Collection.get(id) so long as id < Collection.size() ...
 		// But ... this removes the requirement that the JSON data file be ordered perfectly, so why not? (though it is anyways...)
-		for (int i = 0; i < Collection.size(); ++i) {
-			if (Collection.get(i).getID() == id) {
-				return Collection.get(i);
+		for (Card c : Collection) {
+			if (c.getID() == id) {
+				return c;
 			}
 		}
 		return null;
@@ -42,8 +43,14 @@ public class Card {
 	 *     Methods
 	 */
 	
-	// Original JSON Object
-	private JSONObject obj;
+	// Card Properties
+	private int ID, Points;
+	private String sImage, sMatch, sMisMatch, sReveal;
+	
+	// Card Data-Object Instances
+	OggClip MatchSound, MisMatchSound, RevealSound;
+	ImageIcon Image;
+	
 	/*** JSON Format
 	 * {
 	 *   "id": x,
@@ -55,17 +62,7 @@ public class Card {
 	 * }
 	 */
 	
-	// Card Properties
-	private int ID, Points;
-	private String sImage, sMatch, sMisMatch, sReveal;
-	
-	// Card Data-Object Instances
-	OggClip MatchSound, MisMatchSound, RevealSound;
-	ImageIcon Image;
-	
 	public Card(JSONObject data) throws JSONException, IOException {
-		obj = data;
-		
 		// Populate object properties
 		ID = data.getInt("id");
 		Points = data.getInt("points");

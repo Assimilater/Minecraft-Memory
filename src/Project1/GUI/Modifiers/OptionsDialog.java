@@ -1,22 +1,23 @@
-package Project1.GUI;
+package Project1.GUI.Modifiers;
 
+import Project1.GUI.MainFrame;
 import Project1.Game.Game;
-import Project1.Game.GameSize;
-import Project1.Game.Options;
+import Project1.Game.Modifiers.GameSize;
+import Project1.Game.Modifiers.Options;
 import Project1.MemoryGame;
 
 import javax.swing.*;
 import java.awt.Container;
+import java.awt.event.KeyEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 
 public class OptionsDialog extends JDialog implements ActionListener {
 	// GUI-related members
 	private static final int WIDTH = 325, HEIGHT = 180;
 	private static final String TITLE = "Minecraft Memory Options";
 	private Container pane;
-
+	
 	// GUI components
 	private static final int RADIO_WIDTH = 200, RADIO_HEIGHT = 20;
 	JRadioButton R6, R7, R8;

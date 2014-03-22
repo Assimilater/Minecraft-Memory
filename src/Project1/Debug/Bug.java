@@ -3,13 +3,6 @@ package Project1.Debug;
 public class Bug {
 	private String Type, Category, Key, Value;
 	
-	public Bug(String type) {
-		Type = type;
-	}
-	public Bug(String type, String category) {
-		Type = type;
-		Category = category;
-	}
 	public Bug(String type, String category, String key) {
 		Type = type;
 		Category = category;
