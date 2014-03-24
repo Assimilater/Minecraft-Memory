@@ -1,7 +1,7 @@
-package Project1.GUI;
+package Memory.GUI;
 
-import Project1.Game.*;
-import Project1.Game.Modifiers.Matching;
+import Memory.Game.*;
+import Memory.Game.Modifiers.Matching;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,7 +16,7 @@ public class CardButton extends JButton implements ActionListener {
 	
 	public CardButton(Card v) {
 		Child = v;
-		back = new ImageIcon("src/Project1/img/back.jpg");
+		back = new ImageIcon("src/Memory/img/back.jpg");
 		selfTimer = new Timer((int) TimeUnit.SECONDS.toMillis(1), this);
 		
 		this.addActionListener(this);

@@ -1,11 +1,11 @@
-package Project1.Game;
+package Memory.Game;
 
-import Project1.GUI.CardButton;
-import Project1.GUI.GamePanel;
-import Project1.GUI.MainFrame;
-import Project1.Game.Modifiers.GameSize;
-import Project1.Game.Modifiers.Options;
-import Project1.Game.Modifiers.Player;
+import Memory.GUI.CardButton;
+import Memory.GUI.GamePanel;
+import Memory.GUI.MainFrame;
+import Memory.Game.Modifiers.GameSize;
+import Memory.Game.Modifiers.Options;
+import Memory.Game.Modifiers.Player;
 
 import javax.swing.*;
 import java.util.*;

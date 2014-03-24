@@ -1,4 +1,4 @@
-package Project1.Game.Modifiers;
+package Memory.Game.Modifiers;
 
 public class Options {
 	// Members pertaining to the board size, set by OptionsDialog
@@ -16,6 +16,5 @@ public class Options {
 	}
 	
 	// Members pertaining to the Players, set by PlayersDialog
-	// (PlayersDialog is not currently used in the submitted project, so this just defaults to "Player 1" and "Player 2")
 	public static Player Player1 = new Player("Player 1"), Player2 = new Player("Player 2");
 }

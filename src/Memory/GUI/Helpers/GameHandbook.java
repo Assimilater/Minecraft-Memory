@@ -1,6 +1,6 @@
-package Project1.GUI.Helpers;
+package Memory.GUI.Helpers;
 
-import Project1.GUI.MainFrame;
+import Memory.GUI.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,8 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
-
-// This class is not currently used in the submitted project
 
 public class GameHandbook extends JFrame implements ActionListener, WindowListener {
 	// GUI-related members

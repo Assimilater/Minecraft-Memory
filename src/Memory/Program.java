@@ -1,9 +1,9 @@
-package Project1;
+package Memory;
 
-import Project1.Debug.BugList;
-import Project1.GUI.MainFrame;
-import Project1.Game.Card;
-import Project1.Game.Game;
+import Memory.Debug.BugList;
+import Memory.GUI.MainFrame;
+import Memory.Game.Card;
+import Memory.Game.Game;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class MemoryGame {
+public class Program {
 	// Shared font and data-set
 	public static Font Display = new Font("Serif", Font.PLAIN, 20);
 	
@@ -26,8 +26,8 @@ public class MemoryGame {
 		try {
 			// Load the JSON data files
 			JSONObject
-				imgMap = new JSONObject(new String(Files.readAllBytes(Paths.get("src/Project1/img/_map.json")))),
-				bugList = new JSONObject(new String(Files.readAllBytes(Paths.get("src/Project1/img/_bug.json"))));
+				imgMap = new JSONObject(new String(Files.readAllBytes(Paths.get("src/Memory/img/_map.json")))),
+				bugList = new JSONObject(new String(Files.readAllBytes(Paths.get("src/Memory/img/_bug.json"))));
 			
 			// Populate a list of Cards with data from the file
 			Card.Collection = new LinkedList<Card>();

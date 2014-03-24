@@ -1,4 +1,4 @@
-package Project1.Debug;
+package Memory.Debug;
 
 public class Bug {
 	private String Type, Category, Key, Value;

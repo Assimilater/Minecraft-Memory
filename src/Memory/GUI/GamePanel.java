@@ -1,7 +1,7 @@
-package Project1.GUI;
+package Memory.GUI;
 
-import Project1.Game.Game;
-import Project1.MemoryGame;
+import Memory.Game.Game;
+import Memory.Program;
 
 import javax.swing.*;
 
@@ -9,7 +9,7 @@ public class GamePanel extends JSplitPane {
 	// Constants
 	private static final ImageIcon PlayerImage =
 		new ImageIcon(
-			new ImageIcon("src/Project1/img/Player.png")
+			new ImageIcon("src/Memory/img/Player.png")
 				.getImage()
 				.getScaledInstance(50, 100, java.awt.Image.SCALE_SMOOTH)
 		);
@@ -54,45 +54,45 @@ public class GamePanel extends JSplitPane {
 		
 		// Initialize consecutive count labels
 		Consecutive = new JLabel();
-		Consecutive.setFont(MemoryGame.Display);
+		Consecutive.setFont(Program.Display);
 		Consecutive.setSize(190, 45);
 		
 		// Initialize Player 1 Labels
 		P1_Name = new JLabel();
-		P1_Name.setFont(MemoryGame.Display);
+		P1_Name.setFont(Program.Display);
 		P1_Name.setLocation(60, 5);
 		P1_Name.setSize(160, 20);
 		
 		P1_Score = new JLabel();
-		P1_Score.setFont(MemoryGame.Display);
+		P1_Score.setFont(Program.Display);
 		P1_Score.setLocation(60, 30);
 		P1_Score.setSize(160, 20);
 		
 		P1_Turns = new JLabel();
-		P1_Turns.setFont(MemoryGame.Display);
+		P1_Turns.setFont(Program.Display);
 		P1_Turns.setLocation(60, 55);
 		P1_Turns.setSize(160, 20);
 		
 		P1_Wins = new JLabel();
-		P1_Wins.setFont(MemoryGame.Display);
+		P1_Wins.setFont(Program.Display);
 		P1_Wins.setLocation(60, 80);
 		P1_Wins.setSize(160, 20);
 		
 		// Initialize Player 2 Labels
 		P2_Name = new JLabel();
-		P2_Name.setFont(MemoryGame.Display);
+		P2_Name.setFont(Program.Display);
 		P2_Name.setSize(160, 20);
 		
 		P2_Score = new JLabel();
-		P2_Score.setFont(MemoryGame.Display);
+		P2_Score.setFont(Program.Display);
 		P2_Score.setSize(160, 20);
 		
 		P2_Turns = new JLabel();
-		P2_Turns.setFont(MemoryGame.Display);
+		P2_Turns.setFont(Program.Display);
 		P2_Turns.setSize(160, 20);
 		
 		P2_Wins = new JLabel();
-		P2_Wins.setFont(MemoryGame.Display);
+		P2_Wins.setFont(Program.Display);
 		P2_Wins.setSize(160, 20);
 		
 		// Add objects to Scores panel

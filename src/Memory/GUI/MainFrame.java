@@ -1,10 +1,10 @@
-package Project1.GUI;
+package Memory.GUI;
 
-import Project1.GUI.Helpers.GameHandbook;
-import Project1.GUI.Helpers.SoundTester;
-import Project1.GUI.Modifiers.OptionsDialog;
-import Project1.Game.Game;
-import Project1.MemoryGame;
+import Memory.GUI.Helpers.GameHandbook;
+import Memory.GUI.Helpers.SoundTester;
+import Memory.GUI.Modifiers.OptionsDialog;
+import Memory.Game.Game;
+import Memory.Program;
 
 import javax.swing.*;
 import java.awt.*;
@@ -42,48 +42,48 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 		// Initialize the menu and corresponding items
 		NewGameMenuItem = new JMenuItem("New Game");
 		NewGameMenuItem.addActionListener(this);
-		NewGameMenuItem.setFont(MemoryGame.Display);
+		NewGameMenuItem.setFont(Program.Display);
 		NewGameMenuItem.setMnemonic(KeyEvent.VK_N);
 		
 		OptionsMenuItem = new JMenuItem("Options");
 		OptionsMenuItem.addActionListener(this);
-		OptionsMenuItem.setFont(MemoryGame.Display);
+		OptionsMenuItem.setFont(Program.Display);
 		OptionsMenuItem.setMnemonic(KeyEvent.VK_O);
 		
 		ExitMenuItem = new JMenuItem("Exit");
 		ExitMenuItem.addActionListener(this);
-		ExitMenuItem.setFont(MemoryGame.Display);
+		ExitMenuItem.setFont(Program.Display);
 		ExitMenuItem.setMnemonic(KeyEvent.VK_X);
 		
 		RulesMenuItem = new JMenuItem("Rules - How to Play");
 		RulesMenuItem.addActionListener(this);
-		RulesMenuItem.setFont(MemoryGame.Display);
+		RulesMenuItem.setFont(Program.Display);
 		RulesMenuItem.setMnemonic(KeyEvent.VK_R);
 		
 		SoundMenuItem = new JMenuItem("Sound Tester");
 		SoundMenuItem.addActionListener(this);
-		SoundMenuItem.setFont(MemoryGame.Display);
+		SoundMenuItem.setFont(Program.Display);
 		SoundMenuItem.setMnemonic(KeyEvent.VK_S);
 		
 		AboutMenuItem = new JMenuItem("About");
 		AboutMenuItem.addActionListener(this);
-		AboutMenuItem.setFont(MemoryGame.Display);
+		AboutMenuItem.setFont(Program.Display);
 		AboutMenuItem.setMnemonic(KeyEvent.VK_A);
 		
 		GameMenu = new JMenu("Game");
-		GameMenu.setFont(MemoryGame.Display);
+		GameMenu.setFont(Program.Display);
 		GameMenu.add(NewGameMenuItem);
 		GameMenu.add(OptionsMenuItem);
 		GameMenu.add(ExitMenuItem);
 		
 		HelpMenu = new JMenu("Help");
-		HelpMenu.setFont(MemoryGame.Display);
+		HelpMenu.setFont(Program.Display);
 		//HelpMenu.add(RulesMenuItem);
 		HelpMenu.add(SoundMenuItem);
 		HelpMenu.add(AboutMenuItem);
 		
 		MenuBar = new JMenuBar();
-		MenuBar.setFont(MemoryGame.Display);
+		MenuBar.setFont(Program.Display);
 		MenuBar.add(GameMenu);
 		MenuBar.add(HelpMenu);
 		

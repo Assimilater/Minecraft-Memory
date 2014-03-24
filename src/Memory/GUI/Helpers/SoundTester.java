@@ -1,8 +1,8 @@
-package Project1.GUI.Helpers;
+package Memory.GUI.Helpers;
 
-import Project1.Debug.Bug;
-import Project1.Debug.BugList;
-import Project1.Game.Card;
+import Memory.Debug.Bug;
+import Memory.Debug.BugList;
+import Memory.Game.Card;
 import org.newdawn.easyogg.OggClip;
 
 import java.awt.*;

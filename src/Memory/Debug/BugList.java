@@ -1,4 +1,4 @@
-package Project1.Debug;
+package Memory.Debug;
 
 import org.json.JSONArray;
 import org.json.JSONException;

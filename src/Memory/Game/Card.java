@@ -1,6 +1,6 @@
-package Project1.Game;
+package Memory.Game;
 
-import Project1.Game.Modifiers.Matching;
+import Memory.Game.Modifiers.Matching;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.newdawn.easyogg.OggClip;
@@ -20,12 +20,12 @@ public class Card {
 	public static OggClip makeOGG(String name) throws IOException{
 		return new OggClip(
 			new FileInputStream(
-				"src/Project1/img/" + name
+				"src/Memory/img/" + name
 			)
 		);
 	}
 	
-	// Static Utilities populated by MemoryGame.main()
+	// Static Utilities populated by Program.main()
 	public static LinkedList<Card> Collection;
 	public static Card getByID(int id) {
 		// Realistically this could probably just return Collection.get(id) so long as id < Collection.size() ...
@@ -75,7 +75,7 @@ public class Card {
 		MisMatchSound = sMisMatch.equals("") ? null : makeOGG("mob/" + sMisMatch);
 		RevealSound = sReveal.equals("") ? null : makeOGG("mob/" + sReveal);
 		
-		Image = new ImageIcon("src/Project1/img/src/" + sImage);
+		Image = new ImageIcon("src/Memory/img/src/" + sImage);
 	}
 	
 	// Accessors

@@ -1,4 +1,4 @@
-package Project1.Game.Modifiers;
+package Memory.Game.Modifiers;
 
 public class Player {
 	private int Wins, Score, Turns;

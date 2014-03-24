@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Minecraft Memory:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Minecraft_Memory_jar</output-path>
+    <root id="archive" name="Minecraft Memory.jar">
+      <element id="module-output" name="Minecraft Memory" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/easyogg.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jorbis.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/org.json-20120521.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

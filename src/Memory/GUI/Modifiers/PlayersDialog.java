@@ -1,15 +1,13 @@
-package Project1.GUI.Modifiers;
+package Memory.GUI.Modifiers;
 
-import Project1.GUI.MainFrame;
-import Project1.MemoryGame;
+import Memory.GUI.MainFrame;
+import Memory.Program;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-
-// This class is not currently used in the submitted project
 
 public class PlayersDialog extends JDialog implements ActionListener {
 	// GUI-related members
@@ -37,13 +35,13 @@ public class PlayersDialog extends JDialog implements ActionListener {
 		Ok = new JButton("Ok");
 		Ok.setBounds(5, HEIGHT - 78, (WIDTH - 20) / 2, 40);
 		Ok.setMnemonic(KeyEvent.VK_O);
-		Ok.setFont(MemoryGame.Display);
+		Ok.setFont(Program.Display);
 		Ok.addActionListener(this);
 		
 		Cancel = new JButton("Cancel");
 		Cancel.setBounds(10 + ((WIDTH - 20) / 2), HEIGHT - 78, (WIDTH - 20) / 2, 40);
 		Cancel.setMnemonic(KeyEvent.VK_C);
-		Cancel.setFont(MemoryGame.Display);
+		Cancel.setFont(Program.Display);
 		Cancel.addActionListener(this);
 		
 		// Add components to the content pane
