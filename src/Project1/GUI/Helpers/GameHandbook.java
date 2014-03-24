@@ -9,6 +9,8 @@ import java.awt.event.WindowEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 
+// This class is not currently used in the submitted project
+
 public class GameHandbook extends JFrame implements ActionListener, WindowListener {
 	// GUI-related members
 	private static final int WIDTH = 325, HEIGHT = 180;

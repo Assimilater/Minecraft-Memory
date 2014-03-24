@@ -35,18 +35,18 @@
 	{
 		"id": 4,
 		"points": 1,
-		"src": "Horse.png",
-		"match": "7bbbd6126bd37b4f2ec059d2784f95310bd55b75.ogg",
-		"mismatch": "c80439669ee4c5ab6e236787f57fc6aa980dc6f9.ogg",
-		"reveal": "a02c38569979cd6f4305f9e43a7a9fe26477d161.ogg"
-	},
-	{
-		"id": 5,
-		"points": 1,
 		"src": "Mooshroom.png",
 		"match": "2a031f10c7dc24e75d5dc3a374ebe7f36fc3e143.ogg",
 		"mismatch": "989c3b614f736aa77bb2800821ea56936e98ca68.ogg",
 		"reveal": "e07a2da49011ef4cf9d6b1c80a91a06f808c1243.ogg"
+	},
+	{
+		"id": 5,
+		"points": 1,
+		"src": "Horse.png",
+		"match": "7bbbd6126bd37b4f2ec059d2784f95310bd55b75.ogg",
+		"mismatch": "c80439669ee4c5ab6e236787f57fc6aa980dc6f9.ogg",
+		"reveal": "a02c38569979cd6f4305f9e43a7a9fe26477d161.ogg"
 	},
 	{
 		"id": 6,

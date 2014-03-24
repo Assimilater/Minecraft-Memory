@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
+// This class is not currently used in the submitted project
+
 public class PlayersDialog extends JDialog implements ActionListener {
 	// GUI-related members
 	private static final int WIDTH = 325, HEIGHT = 200;

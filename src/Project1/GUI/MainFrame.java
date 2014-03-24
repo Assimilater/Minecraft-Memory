@@ -78,7 +78,7 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 		
 		HelpMenu = new JMenu("Help");
 		HelpMenu.setFont(MemoryGame.Display);
-		HelpMenu.add(RulesMenuItem);
+		//HelpMenu.add(RulesMenuItem);
 		HelpMenu.add(SoundMenuItem);
 		HelpMenu.add(AboutMenuItem);
 		
