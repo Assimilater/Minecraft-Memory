@@ -26,8 +26,8 @@ public class Program {
 		try {
 			// Load the JSON data files
 			JSONObject
-				imgMap = new JSONObject(new String(Files.readAllBytes(Paths.get("src/Memory/img/_map.json")))),
-				bugList = new JSONObject(new String(Files.readAllBytes(Paths.get("src/Memory/img/_bug.json"))));
+				imgMap = new JSONObject(Program.class.getResourceAsStream("Memory/assets/_map.json")),
+				bugList = new JSONObject(new String(Files.readAllBytes(Paths.get("Memory/assets/_bug.json"))));
 			
 			// Populate a list of Cards with data from the file
 			Card.Collection = new LinkedList<Card>();
@@ -39,9 +39,9 @@ public class Program {
 			
 			// Load other utility clips
 			Card.Clips = new HashMap<String, OggClip>();
-			Card.Clips.put("Start", Card.makeOGG("ogg/start.ogg"));
-			Card.Clips.put("Eat", Card.makeOGG("ogg/eat.ogg"));
-			Card.Clips.put("Burp", Card.makeOGG("ogg/burp.ogg"));
+			Card.Clips.put("Start", Card.makeOGG("start.ogg"));
+			Card.Clips.put("Eat", Card.makeOGG("eat.ogg"));
+			Card.Clips.put("Burp", Card.makeOGG("burp.ogg"));
 			
 			BugList.Init(bugList);
 		}

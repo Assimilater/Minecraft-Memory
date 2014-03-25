@@ -6,6 +6,9 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/easyogg.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jorbis.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/org.json-20120521.jar" path-in-jar="/" />
+      <element id="directory" name="data">
+        <element id="dir-copy" path="$PROJECT_DIR$/src/Memory/assets" />
+      </element>
     </root>
   </artifact>
 </component>

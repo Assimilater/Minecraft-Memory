@@ -16,7 +16,7 @@ public class CardButton extends JButton implements ActionListener {
 	
 	public CardButton(Card v) {
 		Child = v;
-		back = new ImageIcon("src/Memory/img/back.jpg");
+		back = new ImageIcon("assets/img/back.jpg");
 		selfTimer = new Timer((int) TimeUnit.SECONDS.toMillis(1), this);
 		
 		this.addActionListener(this);

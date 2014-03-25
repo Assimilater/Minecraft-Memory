@@ -20,7 +20,7 @@ public class Card {
 	public static OggClip makeOGG(String name) throws IOException{
 		return new OggClip(
 			new FileInputStream(
-				"src/Memory/img/" + name
+				"assets/ogg/" + name
 			)
 		);
 	}
@@ -75,7 +75,7 @@ public class Card {
 		MisMatchSound = sMisMatch.equals("") ? null : makeOGG("mob/" + sMisMatch);
 		RevealSound = sReveal.equals("") ? null : makeOGG("mob/" + sReveal);
 		
-		Image = new ImageIcon("src/Memory/img/src/" + sImage);
+		Image = new ImageIcon("assets/img/mob/" + sImage);
 	}
 	
 	// Accessors
