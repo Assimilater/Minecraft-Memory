@@ -131,6 +131,7 @@ public class OptionsDialog extends JDialog implements ActionListener {
 			}
 		}
 		else {
+			Options.Size = newSize;
 			int Confirmation = JOptionPane.showConfirmDialog(this, "Start a new game?", "Options Confirmation", JOptionPane.YES_NO_OPTION);
 			
 			if (JOptionPane.YES_OPTION == Confirmation) {

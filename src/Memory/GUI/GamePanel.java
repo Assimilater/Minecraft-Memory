@@ -9,7 +9,7 @@ public class GamePanel extends JSplitPane {
 	// Constants
 	private static final ImageIcon PlayerImage =
 		new ImageIcon(
-			new ImageIcon("assets/img/Player.png")
+			new ImageIcon(Program.getAsset("img/Player.png"))
 				.getImage()
 				.getScaledInstance(50, 100, java.awt.Image.SCALE_SMOOTH)
 		);

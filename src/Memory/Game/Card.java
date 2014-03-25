@@ -1,12 +1,12 @@
 package Memory.Game;
 
 import Memory.Game.Modifiers.Matching;
+import Memory.Program;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.newdawn.easyogg.OggClip;
 
 import javax.swing.ImageIcon;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Map;
@@ -19,8 +19,8 @@ public class Card {
 	public static Map<String, OggClip> Clips;
 	public static OggClip makeOGG(String name) throws IOException{
 		return new OggClip(
-			new FileInputStream(
-				"assets/ogg/" + name
+			Program.getAssetAsStream(
+				"ogg/" + name
 			)
 		);
 	}
@@ -75,7 +75,7 @@ public class Card {
 		MisMatchSound = sMisMatch.equals("") ? null : makeOGG("mob/" + sMisMatch);
 		RevealSound = sReveal.equals("") ? null : makeOGG("mob/" + sReveal);
 		
-		Image = new ImageIcon("assets/img/mob/" + sImage);
+		Image = new ImageIcon(Program.getAsset("img/mob/" + sImage));
 	}
 	
 	// Accessors
