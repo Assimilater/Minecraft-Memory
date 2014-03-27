@@ -58,9 +58,8 @@ public class Program {
 			BugList.Init(bugList);
 		}
 		catch (FileNotFoundException e) { dataError("File Not Found Error", e); }
-		catch (IOException e) { dataError("File Read Error", e); }
 		catch (JSONException e) { dataError("JSON Parse Error", e); }
-		catch (Exception e) { dataError("WTF Error", e); }
+		catch (IOException e) { dataError("File Read Error", e); }
 		
 		// Instantiate the GUI components
 		new MainFrame();
@@ -72,7 +71,7 @@ public class Program {
 	// jsonError - Report an error loading the data file to the user and close the program
 	private static void dataError(String msg, Exception e) {
 		e.printStackTrace();
-		JOptionPane.showMessageDialog(null, "This program cannot function without a valid data files", msg, JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null, "This program cannot function without valid data files", msg, JOptionPane.ERROR_MESSAGE);
 		System.exit(-1);
 	}
 }
