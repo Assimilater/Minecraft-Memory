@@ -27,7 +27,7 @@ public class PlayersDialog extends JDialog implements ActionListener {
 		this.setTitle(TITLE);
 		this.setResizable(false);
 		this.setSize(WIDTH, HEIGHT);
-		this.setLocationRelativeTo(MainFrame.get());
+		this.setLocationRelativeTo(MainFrame.getThis());
 		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		this.setModal(true);
 		

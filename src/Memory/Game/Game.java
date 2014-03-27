@@ -9,7 +9,6 @@ import Memory.Game.Modifiers.Player;
 
 import javax.swing.*;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 public class Game {
 	public int BoardSize;
@@ -21,14 +20,9 @@ public class Game {
 	
 	// Statically track the current game
 	private static Game instance;
-	public static Game get() { return instance; }
+	public static Game getThis() { return instance; }
 	
 	public Game() {
-		// Close any previous game
-		if (instance != null) {
-			instance.close();
-		}
-		
 		// Set the instance variable
 		instance = this;
 		
@@ -44,7 +38,7 @@ public class Game {
 		Player2.newGame();
 		
 		// Update the labels on the GamePanel
-		GamePanel.get().updateLabels();
+		GamePanel.getThis().updateLabels();
 		
 		Board = new CardButton[BoardSize][BoardSize];
 		LinkedList<CardButton> Pool = new LinkedList<CardButton>();
@@ -83,7 +77,7 @@ public class Game {
 		shuffle(Pool);
 		
 		// Tell the GamePanel to update
-		GamePanel.get().newGame();
+		GamePanel.getThis().newGame();
 		
 		// Play morning-time music :)
 		Card.Clips.get("Start").play();
@@ -93,10 +87,10 @@ public class Game {
 	public void shuffle() {
 		// Return a pool with remaining cards on the field
 		LinkedList<CardButton> Pool = new LinkedList<CardButton>();
-		for (int i = 0; i < BoardSize; ++i) {
-			for (int j = 0; j < BoardSize; ++j) {
-				Pool.add(Board[i][j]);
-				Board[i][j] = null;
+		for (int i = 0; i < instance.BoardSize; ++i) {
+			for (int j = 0; j < instance.BoardSize; ++j) {
+				Pool.add(instance.Board[i][j]);
+				instance.Board[i][j] = null;
 			}
 		}
 		shuffle(Pool);
@@ -106,24 +100,24 @@ public class Game {
 	private void shuffle(LinkedList<CardButton> Pool) {
 		// Randomly assign out the pool to the board
 		Random rand = new Random(); int randInt;
-		for (int i = 0; i < BoardSize; ++i) {
-			for (int j = 0; j < BoardSize; ++j) {
+		for (int i = 0; i < instance.BoardSize; ++i) {
+			for (int j = 0; j < instance.BoardSize; ++j) {
 				randInt = rand.nextInt(Pool.size());
-				Board[i][j] = Pool.get(randInt);
+				instance.Board[i][j] = Pool.get(randInt);
 				Pool.remove(randInt);
 			}
 		}
 		
-		GamePanel.get().drawBoard();
+		GamePanel.getThis().drawBoard();
 		
 		// For debugging purposes I'll cheat ;)
 		System.out.println("\n\n\n\n~~~~~Shuffle~~~~~\n\n");
-		for (int i = 0; i < BoardSize; ++i) {
-			for (int j = 0; j < BoardSize; ++j) {
+		for (int i = 0; i < instance.BoardSize; ++i) {
+			for (int j = 0; j < instance.BoardSize; ++j) {
 				System.out.println(
 					"Column: " + (j + 1) + "\t\t" +
 					"Row: " + (i + 1) + "\t\t" +
-					"Image: " + (Board[i][j].getCard() == null ? "null" : Board[i][j].getCard().getImageName())
+					"Image: " + (instance.Board[i][j].getCard() == null ? "null" : instance.Board[i][j].getCard().getImageName())
 				);
 			}
 		}
@@ -132,30 +126,30 @@ public class Game {
 	// A way to check if the game is over
 	public boolean gameOver() {
 		int cHerobrine = 0, cTotal = 0;
-		for (int i = 0; i < BoardSize; ++i) {
-			for (int j = 0; j < BoardSize; ++j) {
-				if (Board[i][j].getCard() != null) {
+		for (int i = 0; i < instance.BoardSize; ++i) {
+			for (int j = 0; j < instance.BoardSize; ++j) {
+				if (instance.Board[i][j].getCard() != null) {
 					++cTotal;
-					if (Board[i][j].getCard().getID() == Card.HEROBRINE) {
+					if (instance.Board[i][j].getCard().getID() == Card.HEROBRINE) {
 						++cHerobrine;
 					}
 				}
 			}
 		}
-		if (cTotal - cHerobrine == 0 ) {
+		if (cTotal - cHerobrine == 0) {
 			// Award the winner the game and exit
 			Player victor =
-				Player1.getScore() > Player2.getScore()
-				? Player1
-				: Player2;
+				instance.Player1.getScore() > instance.Player2.getScore()
+				? instance.Player1
+				: instance.Player2;
 			
 			victor.giveWin();
-			GamePanel.get().updateLabels();
+			GamePanel.getThis().updateLabels();
 			
 			// Play victory sound (eat for a second then burp) :)
 			try {
 				Card.Clips.get("Eat").loop();
-				TimeUnit.SECONDS.sleep(1);
+				java.util.concurrent.TimeUnit.SECONDS.sleep(1);
 				Card.Clips.get("Eat").stop();
 			} catch (InterruptedException ie) {
 				Card.Clips.get("Eat").stop();
@@ -164,24 +158,19 @@ public class Game {
 			
 			// Show Congratulatory Message
 			JOptionPane.showMessageDialog(
-				MainFrame.get(),
+				MainFrame.getThis(),
 				"Congratulations " + victor.getName() + "!",
 				"You Won",
 				JOptionPane.INFORMATION_MESSAGE
 			);
 			
 			// Set ActiveGame to null
-			GamePanel.get().clearBoard();
-			this.close();
+			GamePanel.getThis().clearBoard();
+			instance = null;
 			
 			// Signal that the game has ended
 			return true;
 		}
 		return false;
-	}
-	
-	// Quit the game, either when finished, closing, or creating a new game
-	public void close() {
-		instance = null;
 	}
 }

@@ -26,7 +26,7 @@ public class GamePanel extends JSplitPane {
 	
 	// Statically track the instantiated GamePanel
 	private static GamePanel instance;
-	public static GamePanel get() { return instance; }
+	public static GamePanel getThis() { return instance; }
 	
 	public GamePanel() {
 		// Set the instance variable
@@ -113,17 +113,17 @@ public class GamePanel extends JSplitPane {
 	// newGame() - Update the labels for player names
 	public void newGame() {
 		// Set the label's text that represent the player names
-		P1_Name.setText(Game.get().Player1.getName());
-		P2_Name.setText(Game.get().Player2.getName());
+		P1_Name.setText(Game.getThis().Player1.getName());
+		P2_Name.setText(Game.getThis().Player2.getName());
 		
 		// Clear the Cards JPanel
 		this.clearBoard();
 		
 		// Add the new buttons to the Cards JPanel
-		final int SIZE = Game.get().BoardSize;
+		final int SIZE = Game.getThis().BoardSize;
 		for (int i = 0; i < SIZE; ++i) {
 			for (int j = 0; j < SIZE; ++j) {
-				Cards.add(Game.get().Board[i][j]);
+				Cards.add(Game.getThis().Board[i][j]);
 			}
 		}
 		
@@ -134,57 +134,57 @@ public class GamePanel extends JSplitPane {
 	
 	// updateLabels - Update the labels score, win count, turn count, and also the turn identifying image
 	public void updateLabels() {
-		if (Game.get() == null) { return; }
+		if (Game.getThis() == null) { return; }
 		
 		// Consecutive Matches
 		Consecutive.setText(
 			"<html><div style=\"color: blue; font-weight: bold;\">" +
 				"Consecutive<br/>" +
-				"Match Bonus: " +Game.get().ConsecutiveRun +
+				"Match Bonus: " +Game.getThis().ConsecutiveRun +
 			"</div></html>"
 		);
 		
 		// Turns
-		P1_Turns.setText("Turns Taken: " + Game.get().Player1.getTurns());
-		P2_Turns.setText("Turns Taken: " + Game.get().Player2.getTurns());
+		P1_Turns.setText("Turns Taken: " + Game.getThis().Player1.getTurns());
+		P2_Turns.setText("Turns Taken: " + Game.getThis().Player2.getTurns());
 		
 		// Scores
-		P1_Score.setText("Points: " + Game.get().Player1.getScore());
-		P2_Score.setText("Points: " + Game.get().Player2.getScore());
+		P1_Score.setText("Points: " + Game.getThis().Player1.getScore());
+		P2_Score.setText("Points: " + Game.getThis().Player2.getScore());
 		
 		// Wins
-		P1_Wins.setText("Games Won: " + Game.get().Player1.getWins());
-		P2_Wins.setText("Games Won: " + Game.get().Player2.getWins());
+		P1_Wins.setText("Games Won: " + Game.getThis().Player1.getWins());
+		P2_Wins.setText("Games Won: " + Game.getThis().Player2.getWins());
 		
 		// Turn
-		if (Game.get().thisTurn == Game.get().Player1) {
+		if (Game.getThis().thisTurn == Game.getThis().Player1) {
 			ImgPanel.setLocation(5, 5);
 		}
 		else {
 			ImgPanel.setLocation(5, this.getHeight() - 105);
 		}
 		
-		MainFrame.get().repaint();
+		MainFrame.getThis().repaint();
 	}
 	
 	// drawBoard - Resize and position all CardButton objects in the Cards panel
 	public void drawBoard() {
-		if (Game.get() == null || Game.get().Board == null) { return; }
+		if (Game.getThis() == null || Game.getThis().Board == null) { return; }
 		
-		final int PADDING = 5, SIZE = Game.get().BoardSize;
+		final int PADDING = 5, SIZE = Game.getThis().BoardSize;
 		for (int i = 0; i < SIZE; ++i) {
 			for (int j = 0; j < SIZE; ++j) {
-				Game.get().Board[i][j].setBounds(
+				Game.getThis().Board[i][j].setBounds(
 					(j * ((Cards.getWidth() - PADDING) / SIZE)) + PADDING,		// x
 					(i * ((Cards.getHeight() - PADDING) / SIZE)) + PADDING,		// y
 					((Cards.getWidth() - PADDING) / SIZE) - PADDING,			// width
 					((Cards.getHeight() - PADDING) / SIZE) - PADDING			// height
 				);
-				Game.get().Board[i][j].resize();
+				Game.getThis().Board[i][j].resize();
 			}
 		}
 		
-		MainFrame.get().repaint();
+		MainFrame.getThis().repaint();
 	}
 	
 	// resizePanel - Update the position of key labels and call other redraw methods
@@ -201,13 +201,13 @@ public class GamePanel extends JSplitPane {
 		P2_Turns.setLocation(60, Scores.getHeight() - 55);
 		P2_Wins.setLocation(60, Scores.getHeight() - 30);
 		
-		MainFrame.get().repaint();
+		MainFrame.getThis().repaint();
 	}
 	
 	// clearBoard - Remove added components before starting a new game
 	public void clearBoard() {
 		Cards.removeAll();
 		ImgPanel.setVisible(false);
-		MainFrame.get().repaint();
+		MainFrame.getThis().repaint();
 	}
 }

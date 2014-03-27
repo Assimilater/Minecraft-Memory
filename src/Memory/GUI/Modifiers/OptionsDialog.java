@@ -32,7 +32,7 @@ public class OptionsDialog extends JDialog implements ActionListener {
 		this.setTitle(TITLE);
 		this.setResizable(false);
 		this.setSize(WIDTH, HEIGHT);
-		this.setLocationRelativeTo(MainFrame.get());
+		this.setLocationRelativeTo(MainFrame.getThis());
 		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		this.setModal(true);
 		
@@ -113,7 +113,7 @@ public class OptionsDialog extends JDialog implements ActionListener {
 		}
 		
 		// Check if settings have changed and there is still a game active
-		if (Game.get() != null) {
+		if (Game.getThis() != null) {
 			if (Options.Size != newSize) {
 				int Confirmation = JOptionPane.showConfirmDialog(this,
 					"Changes will not affect the current game. Quit the current game and start a new one?",

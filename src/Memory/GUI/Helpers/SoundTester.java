@@ -21,7 +21,7 @@ public class SoundTester extends JFrame implements WindowListener {
 	
 	// Only allow single instance open
 	private static SoundTester instance;
-	public static SoundTester get() { return instance; }
+	public static SoundTester getThis() { return instance; }
 	
 	public SoundTester() {
 		// Set JFrame properties

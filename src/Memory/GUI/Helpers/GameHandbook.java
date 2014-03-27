@@ -19,8 +19,8 @@ public class GameHandbook extends JFrame implements ActionListener, WindowListen
 	JButton Next, Previous;
 	
 	// Only allow single instance open
-	private static SoundTester instance;
-	public static SoundTester get() { return instance; }
+	private static GameHandbook instance;
+	public static GameHandbook getThis() { return instance; }
 	
 	public GameHandbook() {
 		// Set standard JFrame properties
@@ -30,7 +30,7 @@ public class GameHandbook extends JFrame implements ActionListener, WindowListen
 		this.setTitle(TITLE);
 		this.setResizable(false);
 		this.setSize(WIDTH, HEIGHT);
-		this.setLocationRelativeTo(MainFrame.get());
+		this.setLocationRelativeTo(MainFrame.getThis());
 		
 		// Initialize components
 		

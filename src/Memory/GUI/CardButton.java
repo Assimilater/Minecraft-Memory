@@ -47,7 +47,7 @@ public class CardButton extends JButton implements ActionListener {
 	public void faceUp() {
 		// Make sure this isn't just a place-holder
 		if (this.Child == null) { return; }
-		if (Game.get().TimerRunning) { return; }
+		if (Game.getThis().TimerRunning) { return; }
 		
 		// Show the face
 		this.setIcon(Child.getImage());
@@ -55,11 +55,11 @@ public class CardButton extends JButton implements ActionListener {
 		
 		// Determine the type of match
 		Matching MatchType;
-		if (Game.get().FlippedCard == null) {
+		if (Game.getThis().FlippedCard == null) {
 			MatchType = Matching.Reveal;
 		}
-		else if (Game.get().FlippedCard != this) {
-			if (Game.get().FlippedCard.getCard() == this.getCard()) {
+		else if (Game.getThis().FlippedCard != this) {
+			if (Game.getThis().FlippedCard.getCard() == this.getCard()) {
 				MatchType = Matching.Match;
 			}
 			else {
@@ -76,20 +76,20 @@ public class CardButton extends JButton implements ActionListener {
 		
 		// Give points if appropriate
 		if(MatchType == Matching.Reveal) {
-			Game.get().FlippedCard = this;
+			Game.getThis().FlippedCard = this;
 		}
 		else {
 			if (MatchType == Matching.Match) {
-				Game.get().thisTurn.givePoints(Child.getPoints());
-				GamePanel.get().updateLabels();
+				Game.getThis().thisTurn.givePoints(Child.getPoints());
+				GamePanel.getThis().updateLabels();
 			}
 			
 			// Increase the turn count for the given player
-			Game.get().thisTurn.giveTurn();
+			Game.getThis().thisTurn.giveTurn();
 			
 			// Set a timer to trigger the next event so the frame will render
 			selfTimer.start();
-			Game.get().TimerRunning = true;
+			Game.getThis().TimerRunning = true;
 		}
 	}
 	
@@ -101,60 +101,60 @@ public class CardButton extends JButton implements ActionListener {
 		else {
 			// the faceUp() method has a delay so the user can see the card, then this code block executes
 			selfTimer.stop();
-			Game.get().TimerRunning = false;
+			Game.getThis().TimerRunning = false;
 			
 			// Keep track if Herobrine was revealed before removing stuff
 			boolean needShuffle =
 				Child.getID() == Card.HEROBRINE ||
-				Game.get().FlippedCard.Child.getID() == Card.HEROBRINE;
+				Game.getThis().FlippedCard.Child.getID() == Card.HEROBRINE;
 			
 			// Keep track if the user goes again because of a match
 			boolean goAgain = false;
 			
 			// Handle the FlippedCard property appropriately
-			if (Game.get().FlippedCard.getCard() == this.getCard()) {
+			if (Game.getThis().FlippedCard.getCard() == this.getCard()) {
 				// Got a match, go again
 				goAgain = true;
 				
 				// Check consecutive point bonus
-				if (Game.get().ConsecutiveRun > 0) {
-					Game.get().thisTurn.givePoints(1);
+				if (Game.getThis().ConsecutiveRun > 0) {
+					Game.getThis().thisTurn.givePoints(1);
 				}
 				
 				// Increase consecutive increment
-				Game.get().ConsecutiveRun++;
+				Game.getThis().ConsecutiveRun++;
 				
 				// Remove matched cards from the game
-				Game.get().FlippedCard.clear();
+				Game.getThis().FlippedCard.clear();
 				this.clear();
 			}
 			else {
 				// Reset consecutive count
-				Game.get().ConsecutiveRun = 0;
+				Game.getThis().ConsecutiveRun = 0;
 				
 				// Flip cards back over
-				Game.get().FlippedCard.faceDown();
+				Game.getThis().FlippedCard.faceDown();
 				this.faceDown();
 			}
-			Game.get().FlippedCard = null;
+			Game.getThis().FlippedCard = null;
 			
 			// Shuffle if Herobrine was revealed
 			if (needShuffle) {
-				Game.get().shuffle();
+				Game.getThis().shuffle();
 			}
 			
-			if (!Game.get().gameOver()) {
+			if (!Game.getThis().gameOver()) {
 				if (!goAgain) {
 					// Change the player's turn
-					Game.get().thisTurn =
-						Game.get().thisTurn == Game.get().Player2
-							? Game.get().Player1
-							: Game.get().Player2;
+					Game.getThis().thisTurn =
+						Game.getThis().thisTurn == Game.getThis().Player2
+							? Game.getThis().Player1
+							: Game.getThis().Player2;
 				}
 			}
 			
 			// Tell the GamePanel to update
-			GamePanel.get().updateLabels();
+			GamePanel.getThis().updateLabels();
 		}
 	}
 	
@@ -194,6 +194,6 @@ public class CardButton extends JButton implements ActionListener {
 			)
 		);
 		
-		MainFrame.get().repaint();
+		MainFrame.getThis().repaint();
 	}
 }

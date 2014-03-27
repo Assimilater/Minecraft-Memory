@@ -22,7 +22,7 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 	
 	// Only allow single instance open
 	private static MainFrame instance;
-	public static MainFrame get() { return instance; }
+	public static MainFrame getThis() { return instance; }
 	
 	public MainFrame() {
 		// Set the instance variable
@@ -92,7 +92,7 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 		
 		// Add the menu and GamePanel to the JFrame
 		pane.add(MenuBar, BorderLayout.NORTH);
-		pane.add(GamePanel.get(), BorderLayout.CENTER);
+		pane.add(GamePanel.getThis(), BorderLayout.CENTER);
 		
 		// Show our new amazing window!
 		this.setVisible(true);
@@ -101,7 +101,7 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 	// boolean confirmExit() show a confirmation if a game is active before closing the program
 	private boolean confirmQuit(String title) {
 		return 
-			Game.get() == null ||
+			Game.getThis() == null ||
 			JOptionPane.NO_OPTION != JOptionPane.showConfirmDialog(this, "Quit the Current Game?", "Confirm " + title, JOptionPane.YES_NO_OPTION);
 	}
 	
@@ -121,19 +121,19 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 			}
 		}
 		else if (e.getSource() == RulesMenuItem) {
-			if (GameHandbook.get() == null) {
+			if (GameHandbook.getThis() == null) {
 				new GameHandbook();
 			}
 			else {
-				GameHandbook.get().setVisible(true);
+				GameHandbook.getThis().setVisible(true);
 			}
 		}
 		else if (e.getSource() == SoundMenuItem) {
-			if (SoundTester.get() == null) {
+			if (SoundTester.getThis() == null) {
 				new SoundTester();
 			}
 			else {
-				SoundTester.get().setVisible(true);
+				SoundTester.getThis().setVisible(true);
 			}
 		}
 		else if (e.getSource() == AboutMenuItem) {
@@ -156,7 +156,7 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 	
 	// WindowListener
 	public void windowClosing(WindowEvent e) {
-		if (Game.get() == null) {
+		if (Game.getThis() == null) {
 			System.exit(0);
 		}
 		else if (confirmQuit("Exit")) {
@@ -173,8 +173,8 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 	
 	// HierarchyBoundsListener
 	public void ancestorResized(HierarchyEvent e) {
-		if (GamePanel.get() != null) {
-			GamePanel.get().resizePanel();
+		if (GamePanel.getThis() != null) {
+			GamePanel.getThis().resizePanel();
 		}
 	}
 	public void ancestorMoved(HierarchyEvent e) { }
