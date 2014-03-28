@@ -54,45 +54,45 @@ public class GamePanel extends JSplitPane {
 		
 		// Initialize consecutive count labels
 		Consecutive = new JLabel();
-		Consecutive.setFont(Program.Display);
+		Consecutive.setFont(Program.displayFont);
 		Consecutive.setSize(190, 45);
 		
 		// Initialize Player 1 Labels
 		P1_Name = new JLabel();
-		P1_Name.setFont(Program.Display);
+		P1_Name.setFont(Program.displayFont);
 		P1_Name.setLocation(60, 5);
 		P1_Name.setSize(160, 20);
 		
 		P1_Score = new JLabel();
-		P1_Score.setFont(Program.Display);
+		P1_Score.setFont(Program.displayFont);
 		P1_Score.setLocation(60, 30);
 		P1_Score.setSize(160, 20);
 		
 		P1_Turns = new JLabel();
-		P1_Turns.setFont(Program.Display);
+		P1_Turns.setFont(Program.displayFont);
 		P1_Turns.setLocation(60, 55);
 		P1_Turns.setSize(160, 20);
 		
 		P1_Wins = new JLabel();
-		P1_Wins.setFont(Program.Display);
+		P1_Wins.setFont(Program.displayFont);
 		P1_Wins.setLocation(60, 80);
 		P1_Wins.setSize(160, 20);
 		
 		// Initialize Player 2 Labels
 		P2_Name = new JLabel();
-		P2_Name.setFont(Program.Display);
+		P2_Name.setFont(Program.displayFont);
 		P2_Name.setSize(160, 20);
 		
 		P2_Score = new JLabel();
-		P2_Score.setFont(Program.Display);
+		P2_Score.setFont(Program.displayFont);
 		P2_Score.setSize(160, 20);
 		
 		P2_Turns = new JLabel();
-		P2_Turns.setFont(Program.Display);
+		P2_Turns.setFont(Program.displayFont);
 		P2_Turns.setSize(160, 20);
 		
 		P2_Wins = new JLabel();
-		P2_Wins.setFont(Program.Display);
+		P2_Wins.setFont(Program.displayFont);
 		P2_Wins.setSize(160, 20);
 		
 		// Add objects to Scores panel

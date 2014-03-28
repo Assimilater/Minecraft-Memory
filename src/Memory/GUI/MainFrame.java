@@ -42,48 +42,48 @@ public class MainFrame extends JFrame implements ActionListener, WindowListener,
 		// Initialize the menu and corresponding items
 		NewGameMenuItem = new JMenuItem("New Game");
 		NewGameMenuItem.addActionListener(this);
-		NewGameMenuItem.setFont(Program.Display);
+		NewGameMenuItem.setFont(Program.displayFont);
 		NewGameMenuItem.setMnemonic(KeyEvent.VK_N);
 		
 		OptionsMenuItem = new JMenuItem("Options");
 		OptionsMenuItem.addActionListener(this);
-		OptionsMenuItem.setFont(Program.Display);
+		OptionsMenuItem.setFont(Program.displayFont);
 		OptionsMenuItem.setMnemonic(KeyEvent.VK_O);
 		
 		ExitMenuItem = new JMenuItem("Exit");
 		ExitMenuItem.addActionListener(this);
-		ExitMenuItem.setFont(Program.Display);
+		ExitMenuItem.setFont(Program.displayFont);
 		ExitMenuItem.setMnemonic(KeyEvent.VK_X);
 		
 		RulesMenuItem = new JMenuItem("Rules - How to Play");
 		RulesMenuItem.addActionListener(this);
-		RulesMenuItem.setFont(Program.Display);
+		RulesMenuItem.setFont(Program.displayFont);
 		RulesMenuItem.setMnemonic(KeyEvent.VK_R);
 		
 		SoundMenuItem = new JMenuItem("Sound Tester");
 		SoundMenuItem.addActionListener(this);
-		SoundMenuItem.setFont(Program.Display);
+		SoundMenuItem.setFont(Program.displayFont);
 		SoundMenuItem.setMnemonic(KeyEvent.VK_S);
 		
 		AboutMenuItem = new JMenuItem("About");
 		AboutMenuItem.addActionListener(this);
-		AboutMenuItem.setFont(Program.Display);
+		AboutMenuItem.setFont(Program.displayFont);
 		AboutMenuItem.setMnemonic(KeyEvent.VK_A);
 		
 		GameMenu = new JMenu("Game");
-		GameMenu.setFont(Program.Display);
+		GameMenu.setFont(Program.displayFont);
 		GameMenu.add(NewGameMenuItem);
 		GameMenu.add(OptionsMenuItem);
 		GameMenu.add(ExitMenuItem);
 		
 		HelpMenu = new JMenu("Help");
-		HelpMenu.setFont(Program.Display);
+		HelpMenu.setFont(Program.displayFont);
 		//HelpMenu.add(RulesMenuItem);
 		HelpMenu.add(SoundMenuItem);
 		HelpMenu.add(AboutMenuItem);
 		
 		MenuBar = new JMenuBar();
-		MenuBar.setFont(Program.Display);
+		MenuBar.setFont(Program.displayFont);
 		MenuBar.add(GameMenu);
 		MenuBar.add(HelpMenu);
 		

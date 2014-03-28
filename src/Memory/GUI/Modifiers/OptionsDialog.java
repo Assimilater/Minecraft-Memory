@@ -39,22 +39,22 @@ public class OptionsDialog extends JDialog implements ActionListener {
 		// Initialize components
 		LblSize = new JLabel("Game Size:");
 		LblSize.setBounds(5, 5, 200, 15);
-		LblSize.setFont(Program.Display);
+		LblSize.setFont(Program.displayFont);
 		
 		R6 = new JRadioButton("6x6 (36 Cards)");
 		R6.setBounds(10, 30, RADIO_WIDTH, RADIO_HEIGHT);
 		R6.setMnemonic(KeyEvent.VK_6);
-		R6.setFont(Program.Display);
+		R6.setFont(Program.displayFont);
 		
 		R7 = new JRadioButton("7x7 (49 Cards)");
 		R7.setBounds(10, 55, RADIO_WIDTH, RADIO_HEIGHT);
 		R7.setMnemonic(KeyEvent.VK_4);
-		R7.setFont(Program.Display);
+		R7.setFont(Program.displayFont);
 		
 		R8 = new JRadioButton("8x8 (64 Cards)");
 		R8.setBounds(10, 80, RADIO_WIDTH, RADIO_HEIGHT);
 		R8.setMnemonic(KeyEvent.VK_8);
-		R8.setFont(Program.Display);
+		R8.setFont(Program.displayFont);
 		
 		ButtonGroup radioGroup = new ButtonGroup();
 		radioGroup.add(R6);
@@ -64,13 +64,13 @@ public class OptionsDialog extends JDialog implements ActionListener {
 		Ok = new JButton("Ok");
 		Ok.setBounds(5, HEIGHT - 68, (WIDTH - 20) / 2, 30);
 		Ok.setMnemonic(KeyEvent.VK_O);
-		Ok.setFont(Program.Display);
+		Ok.setFont(Program.displayFont);
 		Ok.addActionListener(this);
 		
 		Cancel = new JButton("Cancel");
 		Cancel.setBounds(10 + ((WIDTH - 20) / 2), HEIGHT - 68, (WIDTH - 20) / 2, 30);
 		Cancel.setMnemonic(KeyEvent.VK_C);
-		Cancel.setFont(Program.Display);
+		Cancel.setFont(Program.displayFont);
 		Cancel.addActionListener(this);
 		
 		// Add components to the content pane

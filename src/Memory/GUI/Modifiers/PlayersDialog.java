@@ -35,13 +35,13 @@ public class PlayersDialog extends JDialog implements ActionListener {
 		Ok = new JButton("Ok");
 		Ok.setBounds(5, HEIGHT - 78, (WIDTH - 20) / 2, 40);
 		Ok.setMnemonic(KeyEvent.VK_O);
-		Ok.setFont(Program.Display);
+		Ok.setFont(Program.displayFont);
 		Ok.addActionListener(this);
 		
 		Cancel = new JButton("Cancel");
 		Cancel.setBounds(10 + ((WIDTH - 20) / 2), HEIGHT - 78, (WIDTH - 20) / 2, 40);
 		Cancel.setMnemonic(KeyEvent.VK_C);
-		Cancel.setFont(Program.Display);
+		Cancel.setFont(Program.displayFont);
 		Cancel.addActionListener(this);
 		
 		// Add components to the content pane

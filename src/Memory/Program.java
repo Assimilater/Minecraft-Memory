@@ -22,7 +22,7 @@ import java.util.LinkedList;
 
 public class Program {
 	// Shared font and data-set
-	public static Font Display = new Font("Serif", Font.PLAIN, 20);
+	public static Font displayFont = new Font("Serif", Font.PLAIN, 20);
 	
 	public static URL getAsset(String name) {
 		return Program.class.getClassLoader().getResource("Memory/assets/" + name);
